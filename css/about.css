@@ -1,5 +1,290 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap');
+ @import "style.css";
+ /* Reset some default styles  */
 
-body{
-  background: url(/image/bg_page.jpg);
+ body {
+  margin: 0;
+  padding: 0;
+}
+
+
+.content {
+  background-color: #f8f8f8;
+  text-align: center;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Global styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+/* Section 1 */
+h1{
+  font-size: 40px ; 
+  color: var(--color-gold);
+}
+.Ssection1 p{
+  font-size: 18px;
+}
+
+
+/* Parallax */
+
+#header span{
+  font-size:8vh;
+  height: inherit;
+  display: block;
+  text-align: center;
+}
+#section-a{
+  background-image: url("../image/banner.jpg");
+  min-height: 60vh;
+  background-position:center;
+  background-attachment: fixed;
+  background-size: 100%;
+  opacity: 0.9;
+}
+
+.para{
+  min-height: 20vh;
+  word-wrap: normal;
+  padding:5% 10% 5%;
+  justify-content: center;
+
+}
+.para p{
+  font-size: 23px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.para li{
+  font-size: 23px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.container-fluid {
+  display: flex;
+  background-color: whitesmoke;
+}
+
+.innerblock {
+  background-color: white;
+  padding: 20px;
+  z-index: 2;
+  margin-left: 200px;
+}
+
+/* Mission */
+.mission{
+  text-align: center;
+  
+}
+
+/* Segments */
+.frame1 {
+  height: 35.6rem;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.frame-content {
+    background-color:white;
+    height: 31.5rem;
+    left: 55.2rem;
+    position: absolute;
+    top: 2.3rem;
+    width: 37.9rem;
+}
+.pic1 {
+    height: 25.6rem;
+    left: 7.1rem;
+    object-fit: cover;
+    position: absolute;
+    top: 5.2rem;
+    vertical-align: top;
+    margin-left: 15rem;
+    width: 34rem;
+    z-index: 1;
+}
+.bishop, h3 {  
+    color: #000000;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 25px;
+  
+    
+}
+ol li {
+  font-size: 14px;
+  margin-left: 15px;
+
+ 
+}
+h6{
+  font-size: 22px;
+  font-weight: lighter;
+  margin-left: 35px;
+}
+
+/* Timeline */
+.timeline {
+background-color: var(--color-gold) ;
+height: 95vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+padding: 20px;
+
+}
+
+.title {
+color: white;
+font-size: 30px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+margin-top: 20px; 
+}
+
+.picture-container {
+margin-top: 10px;
+}
+
+.picture-container img {
+max-width: 100%;
+height: auto;
+}
+
+
+
+
+
+/* video */
+.video-container {
+position: relative;
+width: 100%;
+max-width: 800px; /* Adjust the maximum width of the video */
+height: 0;
+padding-bottom: 56.25%; /* 16:9 aspect ratio */
+margin: 0 auto; /* Center the video container horizontally */
+}
+
+.video-container iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+
+.overlay-text {
+position: absolute;
+top: 25%;
+left: 10px;
+transform: translateY(-50%);
+z-index: 2;
+background-color: var(--color-gold) ; /* Change the background color to blue */
+color: #ffffff;
+padding: 1px;
+margin-left: 500px;
+font-size: 19px;
+}
+
+@media screen and (max-width: 768px) {
+.video-container {
+  padding-bottom: 75%; /* Adjust the aspect ratio for smaller screens */
+}
+
+.overlay-text {
+  font-size: 14px; /* Adjust the font size for smaller screens */
+}
+}
+
+
+
+
+/* cards */
+.card-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+margin-left: 160px;
+}
+
+.card {
+width: 260px;
+background-color: #ffffff;
+border-radius: 2px;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+overflow: hidden;
+margin: 10px;
+
+}
+
+.card-image {
+width: 100%;
+height: 200px;
+object-fit: cover;
+}
+
+.card-content {
+padding: 20px;
+}
+
+.card-title {
+font-size: 22px;
+margin-bottom: 10px;
+text-align: left;
+color: var(--color-gold);
+}
+
+.card-text {
+font-size: 20px;
+color: #0f0e0e;
+}
+
+
+/* End of cards */
+
+/* Responsive Styles */
+
+@media screen and (max-width: 768px) {
+  .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-button {
+    margin: 5px;
+  }
+
+  .footer-columns {
+    flex-wrap: wrap;
+  }
+
+  .footer-column {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+  }
+
+  .about-container {
+    flex-wrap: wrap;
+  }
+
+  .about-content {
+    flex-basis: 100%;
+    margin-bottom: 10px;
+  }
+
+  .learn-more-button {
+    margin-top: 2px;
+    flex-basis: 100%;
+    text-align: center;
+  }
 }
