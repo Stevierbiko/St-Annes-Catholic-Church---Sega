@@ -49,10 +49,6 @@ html::-webkit-scrollbar-track {
 html::-webkit-scrollbar-thumb {
   background: #C1B086;
 }
-a {
-  text-decoration: none;
-  color: var(--color-gold);
-}
 
 section {
   padding: 5rem 10%;
@@ -217,7 +213,7 @@ section {
   margin: 50px 0 0 50px;
 }
 
-button{
+button {
   padding: 20px 40px;
   background: none;
   outline: none;
@@ -423,7 +419,7 @@ button{
 }
 .staff .slide .image img {
   background: #f0fdfa;
-  /* width: 100%; */
+  width: 100%;
 }
 .staff .slide .image .share {
   position: absolute;
@@ -907,7 +903,7 @@ button{
 .footer .credit span a{
   color: #C1B086;
 }
-
+/* media queries Start here  */
 @media (max-width: 1200px) {
   .header {
     padding: 2rem 5%;
@@ -982,4 +978,39 @@ button{
     font-size: 4rem;
   }
 }
-/*# sourceMappingURL=style.css.map */
+
+@media only screen and (max-width:768px) {
+  .home .box .text {
+    max-width: 100%;
+  }
+  /* .home .text {
+    margin: 10% 0 0 0;
+  } */
+.home{
+  margin-bottom: 50rem;
+}
+  .home .box .text::after,
+  .home .image_item {
+    display: none;
+  }
+  .home h1 {
+    font-size: 5rem;
+  }
+
+  .left, .right {
+    width: 100%;
+  }
+  .wrapper .text {
+    width: 80%;
+  }
+  .wrapper .text {
+    padding: 10px;
+    height: 600px;
+  }
+  .about p,
+  .home p {
+    margin: 50px 0 0 0;
+  }
+}
+
+
