@@ -223,6 +223,9 @@ button {
   margin-top: 20px;
   animation: bounce 1s ease-in-out infinite;
 }
+button a{
+  color: var(--color-gold);
+}
 @keyframes bounce {
   0%,
   20%,
