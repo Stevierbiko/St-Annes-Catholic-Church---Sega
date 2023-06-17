@@ -42,6 +42,8 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
     />
+    
+
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css" />
@@ -275,9 +277,24 @@
             </div>
           </div>
         </div>
+        <div class="swiper-pagination"></div>
       </div>
+      
     </section>
-    <!-- staff -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+  // Initialize Swiper
+  var mySwiper = new Swiper('.staff-slider', {
+    // Optional parameters
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  });
+});
+    </script>
+  
+    <!-- staff End Section-->
 
     <section class="wrapper wrapper2 top">
       <div class="container">
@@ -616,6 +633,6 @@
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
     <!-- custom js file link  -->
-    <script src="js/script.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

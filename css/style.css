@@ -403,64 +403,80 @@ button a {
 
 /* staff */
 .staff {
-  margin-top: 50px;
-}
-.staff .slide {
+  padding: 50px 0;
   text-align: center;
-}
-.staff .slide:hover .image img {
-  background: var(--color-gold);
-}
-.staff .slide:hover .image .share {
-  bottom: 0;
-}
-.staff .slide .image {
-  position: relative;
-  overflow: hidden;
-}
-.staff .slide .image img {
-  background: #f0fdfa;
-  width: 100%;
-}
-.staff .slide .image .share {
-  position: absolute;
-  bottom: -10rem;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.8);
-  padding: 2rem;
-}
-.staff .slide .image .share a {
-  font-size: 3rem;
-  margin: 0 1rem;
-  color: #fff;
-}
-.staff .slide .image .share a:hover {
-  color: var(--color-gold);
-}
-.staff .slide .content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-top: 1rem;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-.staff .slide .content h3 {
-  font-size: 2rem;
-  text-transform: capitalize;
-  color: #444;
-}
-.staff .slide .content span {
-  font-size: 1.5rem;
-  line-height: 2;
-  color: #777;
+  justify-content: center;
+
 }
 
+.staff .heading {
+  font-size: 36px;
+  margin: 20px 20px;
+}
+
+.staff-slider {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-slide .image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.swiper-slide .share a{
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: var(--color-gold);
+}
+
+.swiper-slide .content  h3{
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.swiper-slide .content span{
+  font-size: 16px;
+  color: var(--color-gold);
+}
+
+.swiper-slide .social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.swiper-pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+}
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  opacity: 0.5;
+  transition: background-color 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--color-gold);
+}
 /* staff */
 /*--------------sacrament--------*/
 
@@ -964,6 +980,9 @@ button a {
   .home .slide .content h3 {
     font-size: 3rem;
   }
+  .swiper-slide {
+    padding: 10px;
+  }
 }
 
 @media (max-width: 450px) {
@@ -1010,5 +1029,10 @@ button a {
   .about p,
   .home p {
     margin: 50px 0 0 0;
+  }
+}
+@media (max-width: 576px) {
+  .swiper-slide {
+    padding: 5px;
   }
 }

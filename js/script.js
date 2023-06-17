@@ -34,22 +34,7 @@ previewBox.forEach((close) => {
 });
 
 //OUR Staff
-var swiper = new Swiper(".staff-slider", {
-  loop: true,
-  grabCursor: true,
-  spaceBetween: 20,
-  breakpoints: {
-    0: {
-      slidesPerView: 1,
-    },
-    768: {
-      slidesPerView: 2,
-    },
-    991: {
-      slidesPerView: 3,
-    },
-  },
-});
+
 
 // Sacraments accodion Script
 var accItem = document.getElementsByClassName("accordionItem");
