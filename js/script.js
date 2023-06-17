@@ -1,20 +1,12 @@
-const hambuger = document.querySelector(".hambuger");
-const navMenu = document.querySelector(".nav-menu");
+let navbar = document.querySelector('.header .navbar')
 
-hambuger.addEventListener("click", mobileMenu);
-
-function mobileMenu() {
-  hambuger.classList.toggle("active");
-  navMenu.classList.toggle("active");
+document.querySelector('#menu-btn').onclick = () =>{
+  navbar.classList.add('active');
 }
 
-const navLink = document.querySelectorAll(".nav-link");
-navLink.forEach((n) => n.addEventListener("click", closeMenu));
-
-function closeMenu() {
-  hambuger.classList.remove("active");
-  navMenu.classList.remove("active");
-}
+document.querySelector('#close-navbar').onclick = () =>{
+  navbar.classList.remove('active');
+};
 
 // Hero section Script
 function img(anything) {
@@ -26,21 +18,34 @@ function change(change) {
   line.style.background = change;
 }
 
+const previewBox = document.querySelectorAll(".preview-box");
+const previewContainer = document.querySelector(".preview-container");
+
 previewBox.forEach((close) => {
   close.querySelector(".fa-times").onclick = () => {
     close.classList.remove("active");
-    preveiwContainer.style.display = "none";
+    previewContainer.style.display = "none";
   };
 });
 
-//OUR Staff
+// OUR Staff
 
+document.addEventListener("DOMContentLoaded", function () {
+  // Initialize Swiper
+  var mySwiper = new Swiper(".staff-slider", {
+    // Optional parameters
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+});
 
-// Sacraments accodion Script
+// Sacraments accordion Script
 var accItem = document.getElementsByClassName("accordionItem");
-var accHD = document.getElementsByClassName("accordionIHeading");
+var accHD = document.getElementsByClassName("accordionHeading");
 
-for (i = 0; i < accHD.length; i++) {
+for (var i = 0; i < accHD.length; i++) {
   accHD[i].addEventListener("click", toggleItem, false);
 }
 
@@ -54,15 +59,15 @@ function toggleItem() {
   }
 }
 
-// Faq Accordion
-let accordion = document.querySelectorAll(
+// FAQ Accordion
+let faqAccordion = document.querySelectorAll(
   ".faq .accordion-container .accordion"
 );
 
-accordion.forEach((acco) => {
-  acco.onclick = () => {
-    accordion.forEach((dion) => dion.classList.remove("active"));
-    acco.classList.toggle("active");
+faqAccordion.forEach((accordion) => {
+  accordion.onclick = () => {
+    faqAccordion.forEach((item) => item.classList.remove("active"));
+    accordion.classList.toggle("active");
   };
 });
 
@@ -72,3 +77,25 @@ document.querySelector(".load-more .btn").onclick = () => {
   });
   document.querySelector(".load-more .btn").style.display = "none";
 };
+// Gallery script
+$(".owl-carousel").owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  dots: false,
+  navText: [
+    "<i class='fas fa-chevron-left'></i>",
+    "<i class='fas fa-chevron-right'></i>",
+  ],
+  responsive: {
+    0: {
+      items: 1,
+    },
+    768: {
+      items: 2,
+    },
+    1000: {
+      items: 4,
+    },
+  },
+});

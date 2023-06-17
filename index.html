@@ -42,8 +42,6 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
     />
-    
-
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css" />
@@ -58,6 +56,7 @@
       </a>
 
       <nav class="navbar">
+        <div id="close-navbar" class="fas fa-times"></div>
         <a href="#header">home</a>
         <a href="parish.html">parish</a>
         <a href="sacraments.html">Sacraments</a>
@@ -279,9 +278,8 @@
         </div>
         <div class="swiper-pagination"></div>
       </div>
-      
     </section>
-    <script>
+    <!-- <script>
       document.addEventListener("DOMContentLoaded", function () {
   // Initialize Swiper
   var mySwiper = new Swiper('.staff-slider', {
@@ -292,8 +290,8 @@
     },
   });
 });
-    </script>
-  
+    </script> -->
+
     <!-- staff End Section-->
 
     <section class="wrapper wrapper2 top">
@@ -436,24 +434,6 @@
         </div>
       </div>
     </section>
-    <script>
-      var accItem = document.getElementsByClassName("accordionItem");
-      var accHD = document.getElementsByClassName("accordionIHeading");
-
-      for (i = 0; i < accHD.length; i++) {
-        accHD[i].addEventListener("click", toggleItem, false);
-      }
-
-      function toggleItem() {
-        var itemClass = this.parentNode.className;
-        for (var i = 0; i < accItem.length; i++) {
-          accItem[i].className = "accordionItem close";
-        }
-        if (itemClass == "accordionItem close") {
-          this.parentNode.className = "accordionItem open";
-        }
-      }
-    </script>
     <!-- sacraments setion ends -->
 
     <!-- gallery -->
@@ -512,7 +492,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script>
+    <!-- <script>
       $(".owl-carousel").owlCarousel({
         loop: true,
         margin: 10,
@@ -534,7 +514,7 @@
           },
         },
       });
-    </script>
+    </script> -->
 
     <section class="map top">
       <iframe
