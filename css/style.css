@@ -12,6 +12,8 @@
   transition: all 0.2s linear;
   font-display: swap;
 }
+/* global styles */
+
 :root {
   --yellow: #f9d342;
   --dark: #292826;
@@ -26,7 +28,13 @@
   --color-bg1: #f9f7f3;
   --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
-
+.btn1{
+  background: #C1B086;
+}
+.btn1 a{
+  color: var(--color-white);
+}
+/* global styles end */
 img {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -197,20 +205,19 @@ section {
 
 .home .text {
   max-width: 50%;
-  color: white;
+  color: var(--color-white);
   margin: 20% 0 0 10%;
 }
 
 .home h1 {
-  font-size: 50px;
+  font-size: 80px;
   font-weight: 400;
 }
 
 .home p {
   font-weight: 400;
   line-height: 25px;
-  font-family: sans-serif;
-  font-size: 17px;
+  font-size: 20px;
   margin: 50px 0 0 50px;
 }
 
@@ -243,8 +250,12 @@ button a {
   }
 }
 
-.home button {
+.home button{
   margin-left: 50px;
+ 
+}
+.home button a{
+  color: var(--color-white);
 }
 
 .home .image_item {
@@ -264,12 +275,13 @@ button a {
 }
 
 .home .image_item img.active {
-  border: 2px solid white;
+  border: 3px solid var(--color-white);
 }
 
 /* home section ends  */
 
 /* About sections Starts */
+
 .flex {
   display: flex;
 }
@@ -343,6 +355,7 @@ button a {
   width: 100%;
   height: 480px;
   position: relative;
+  margin-top:3%;
 }
 .wrapper .text {
   background: var(--color-gold);
@@ -368,39 +381,59 @@ button a {
 
 /* Daily readings wrapper end */
 
-/*--------------wrapper2--------*/
-.wrapper2 {
-  background-image: url("../image/wrapper.jpg");
+/* worship with us section starts */
+
+
+.home-packages{
+  background: var(--light-bg);
 }
 
-.wrapper2 .text {
-  left: 10%;
+.home-packages .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
 }
 
-.wrapper2 h5,
-.wrapper2 h2 {
-  color: white;
+.home-packages .box-container .box{
+  border:var(--border);
+  box-shadow: var(--box-shadow);
+  background: var(--white);
 }
 
-.wrapper2 img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-right: 20px;
+.home-packages .box-container .box:hover .image img{
+  transform: scale(1.1);
 }
 
-.wrapper2 .para h5 {
-  font-size: 13px;
-  font-weight: 300;
-  margin-top: 5px;
+.home-packages .box-container .box .image{
+  height: 25rem;
+  overflow: hidden;
 }
 
-.wrapper2 .para {
-  margin-left: 10%;
+.home-packages .box-container .box .image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: .2s linear;
 }
 
-/*--------------wrapper2--------*/
+.home-packages .box-container .box .content{
+  padding:2rem;
+  text-align: center;
+}
 
+.home-packages .box-container .box .content h3{
+  font-size: 2.5rem;
+  color:var(--black);
+}
+
+.home-packages .box-container .box .content p{
+  font-size: 1.5rem;
+  color:var(--light-black);
+  line-height: 2;
+  padding:1rem 0;
+}
+
+/* worship with us section starts end */
 /* staff */
 .staff {
   padding: 50px 0;
@@ -478,6 +511,41 @@ button a {
   background-color: var(--color-gold);
 }
 /* staff */
+/*--------------wrapper2--------*/
+.wrapper2 {
+  background-image: url("../image/wrapper.jpg");
+  margin-bottom: 10%;
+}
+
+.wrapper2 .text {
+  left: 10%;
+}
+
+.wrapper2 h5,
+.wrapper2 h2 {
+  color: var(--color-white);
+}
+
+.wrapper2 img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.wrapper2 .para h5 {
+  font-size: 13px;
+  font-weight: 300;
+  margin-top: 5px;
+}
+
+.wrapper2 .para {
+  margin-left: 10%;
+}
+
+/*--------------wrapper2--------*/
+
+
 /*--------------sacrament--------*/
 
 .sacrament img {
@@ -497,6 +565,8 @@ button a {
 .sacrament .text p {
   margin-bottom: 50px;
   line-height: 25px;
+  font-size: 13px;
+  color: #5f5f5f;
 }
 
 .accordionItem {
@@ -506,7 +576,6 @@ button a {
 .accordionItem p {
   font-size: 15px;
   opacity: 0.8;
-  font-family: sans-serif;
   line-height: 20px;
 }
 
@@ -516,7 +585,7 @@ button a {
   border-radius: 3px;
   font-weight: 400;
   font-size: 17px;
-  color: #c1b086;
+  color: var(--color-gold);
   margin-bottom: 20px;
 }
 
@@ -526,12 +595,12 @@ button a {
   transform: scaleY(0);
   float: left;
   display: block;
-  background-color: #fff;
+  background-color: var(--color-white);
 }
 
 .open .accordionItemContent {
   padding: 30px;
-  background-color: #fff;
+  background-color: var(--color-white);
   width: 100%;
   margin: 0 0 10px 0;
   display: block;
@@ -557,7 +626,7 @@ button a {
   width: 50px;
   cursor: pointer;
   top: 35%;
-  background: white !important;
+  background: var(--color-white) !important;
   transition: 0.5s;
 }
 
@@ -571,7 +640,7 @@ button a {
 
 .owl-carousel .owl-next:hover,
 .owl-carousel .owl-prev:hover {
-  background: #c1b086 !important;
+  background: var(--color-gold) !important;
 }
 
 /*--------------gallary--------*/
@@ -728,7 +797,7 @@ button a {
 }
 
 .contact .row form .box:focus {
-  background: #c1b086;
+  background: var(--color-gold);
   color: #fff;
 }
 
@@ -770,11 +839,11 @@ button a {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 40rem;
   flex: 1 1 40rem;
-  border: 0.1rem solid #c1b086;
+  border: 0.1rem solid var(--color-gold);
 }
 
 .faq .accordion-container .accordion.active .accordion-heading {
-  background: #c1b086;
+  background: var(--color-gold);
 }
 
 .faq .accordion-container .accordion.active .accordion-heading h3 {
@@ -982,6 +1051,21 @@ button a {
   }
   .swiper-slide {
     padding: 10px;
+  }
+  .sacrament .container,
+  .about .container{
+    flex-direction: column;
+  }
+  .sacrament .right {
+    padding: 0;
+    margin-top: 50px;
+  }
+  .sacrament .flex {
+    flex-direction: column-reverse;
+  }
+  .about p,
+  .home p {
+    margin: 50px 0 0 0;
   }
 }
 
