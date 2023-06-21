@@ -11,17 +11,14 @@
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
   font-display: swap;
+  caret-color: transparent;
 }
 /* global styles */
 
 :root {
-  --yellow: #f9d342;
   --dark: #292826;
-  --main-color: #c0392b;
-  --accent-color: #f2f4f4;
   --color-gold: #c1b086;
   --color-white: #fff;
-  --color-black: #000;
   --color-warning: #f7c94b;
   --color-success: #00bf8e;
   --color-danger: #f75842;
@@ -29,7 +26,7 @@
   --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 .btn1{
-  background: #C1B086;
+  background: var(--color-gold);
 }
 .btn1 a{
   color: var(--color-white);
@@ -340,12 +337,10 @@ button a {
   line-height: 30px;
   color: #5f5f5f;
   margin: 0 0 20px 50px;
-  text-justify: auto;
+  font-size: 3rem;
 }
 .heading .btn1 {
   margin: 50px 0 20px 50px;
-  border: 1px solid var(--color-gold);
-  color: var(--color-gold);
 }
 /* Daily readings wrapper  */
 .wrapper {
@@ -465,7 +460,7 @@ button a {
   width: 200px;
   height: 200px;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 40%;
   margin-bottom: 20px;
 }
 
