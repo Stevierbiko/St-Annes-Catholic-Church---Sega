@@ -8,6 +8,8 @@ document.querySelector('#close-navbar').onclick = () =>{
   navbar.classList.remove('active');
 };
 
+
+
 // Hero section Script
 function img(anything) {
   document.querySelector(".slide").src = anything;
