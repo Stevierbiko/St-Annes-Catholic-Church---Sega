@@ -2,13 +2,11 @@ let navbar = document.querySelector('.header .navbar')
 
 document.querySelector('#menu-btn').onclick = () =>{
   navbar.classList.add('active');
-}
+}  
 
 document.querySelector('#close-navbar').onclick = () =>{
   navbar.classList.remove('active');
 };
-
-
 
 // Hero section Script
 function img(anything) {
@@ -31,16 +29,21 @@ previewBox.forEach((close) => {
 });
 
 // OUR Staff
-
-document.addEventListener("DOMContentLoaded", function () {
-  // Initialize Swiper
-  var mySwiper = new Swiper(".staff-slider", {
-    // Optional parameters
-    loop: true,
-    pagination: {
-      el: ".swiper-pagination",
+var swiper = new Swiper(".home-staff-slider", {
+  loop:true,
+  grabCursor:true,
+  spaceBetween: 20,
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
     },
-  });
+    768: {
+      slidesPerView: 2,
+    },
+    991: {
+      slidesPerView: 3,
+    },
+  },
 });
 
 // Sacraments accordion Script

@@ -19,10 +19,7 @@
   --dark: #292826;
   --color-gold: #c1b086;
   --color-white: #fff;
-  --color-warning: #f7c94b;
-  --color-success: #00bf8e;
-  --color-danger: #f75842;
-  --color-bg1: #f9f7f3;
+  --color-bg1:  #faf4e6;
   --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 .btn1{
@@ -459,83 +456,60 @@ button a {
 }
 
 /* worship with us section starts end */
-/* staff */
-.staff {
-  padding: 50px 0;
+
+.home-staff .slide {
   text-align: center;
-  justify-content: center;
-
+  position: relative;
+  background: var(--color-bg1);
+  overflow: hidden;
 }
 
-.staff .heading {
-  font-size: 36px;
-  margin: 20px 20px;
+.home-staff .slide:hover .content {
+  bottom: 0;
 }
 
-.staff-slider {
+.home-staff .slide .image {
+  padding: 2rem;
+}
+
+.home-staff .slide .image img {
   width: 100%;
-  height: auto;
-  padding: 20px;
+  margin-bottom: 1.5rem;
 }
 
-.swiper-slide {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.home-staff .slide .image h3 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #444;
 }
 
-.swiper-slide .image img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 40%;
-  margin-bottom: 20px;
-}
-
-.swiper-slide .share a{
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: var(--color-gold);
-}
-
-.swiper-slide .content  h3{
-  font-size: 25px;
-  margin-bottom: 20px;
-}
-.swiper-slide .content span{
-  font-size: 16px;
-  color: var(--color-gold);
-}
-
-.swiper-slide .social-icons {
-  display: flex;
-  justify-content: center;
-}
-
-
-
-.swiper-pagination {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
+.home-staff .slide .content {
   position: absolute;
-  bottom: 10px;
-  left: 50%;
-}
-.swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
-  background-color: #ccc;
-  opacity: 0.5;
-  transition: background-color 0.3s;
+  bottom: -100%;
+  right: 0;
+  left: 0;
+  background: var(--color-gold);
+  padding: 2rem 3rem;
 }
 
-.swiper-pagination-bullet-active {
-  background-color: var(--color-gold);
+.home-staff .slide .content h3 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #444;
+  color: #fff;
 }
-/* staff */
+
+.home-staff .slide .content p {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #777;
+  color: #eee;
+}
+
+.home-staff .slide .content .btn:hover {
+  background: #444;
+}
 /*--------------wrapper2--------*/
 .wrapper2 {
   background-image: url("../image/wrapper.jpg");
@@ -929,6 +903,104 @@ button a {
   pointer-events: none;
 }
 
+/* Mass time and sacraments */
+
+.event { padding-block-end: 120px; }
+
+
+
+.event-list {
+  display: grid;
+  gap: 30px;
+  margin-block-end: 70px;
+}
+
+.event-card {
+  border: 1px solid hsl(0, 0%, 91%);
+  padding: 40px 30px;
+  border-radius: 2px;
+  outline: 3px solid transparent;
+  transition:  0.25s ease;
+}
+
+.event-card:is(:hover, :focus-within) { outline-color: var(--color-gold); }
+
+.event-card .card-time {
+  background-color: var(--color-gold);
+  color: var(--color-white);
+  font-weight: 600;
+  line-height: 1.3;
+  max-width: max-content;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px #faf4e6;
+  display: block;
+  margin-top: 5px;
+}
+
+.event-card .card-time .month { font-size: 2.1rem; }
+
+.event-card .card-time .date { font-size: 2rem; }
+
+.event-card .card-subtitle {
+  margin-block: 30px 5px;
+  color: var(--color-gold);
+  font-size: 3.8rem;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+.event-card .card-title {
+  color: hsl(0, 0%, 15%);
+  letter-spacing: -1px;
+}
+
+.event-card .card-text {
+  margin-block: 5px 30px;
+}
+
+.event .btn-secondary { margin-inline: auto; }
+
+
+
+
+/* Mass time and sacraments */
+ /* Bringing Children to mass banner */
+ .testi { 
+  background-color: var(--dark); 
+  line-height: 2;
+  padding-block: 80px;
+
+}
+
+.testi-content { padding: 80px 15px; }
+
+.testi .section-title {
+  color: var(--color-gold);
+  margin-block: 10px 40px;
+  font-weight:600;
+  font-size: 6.5rem;
+}
+
+.testi-card { color: var(--color-white); }
+
+.testi-text,
+.testi-name { font-size: 1.8rem; }
+
+.testi-text {
+  padding-block-end: 30px;
+  border-block-end: 1px solid hsla(0, 0%, 100%, 0.1);
+  margin-block: 20px 30px;
+}
+
+.testi-title {
+  color: hsla(0, 0%, 100%, 0.5);
+  font-size: 1.4rem;
+}
+
+.testi-banner { background-color: var(--light-gray); }
+
+  /* Bringing Children to mass banner */
 .footer {
   background: #faf4e6;
 }
