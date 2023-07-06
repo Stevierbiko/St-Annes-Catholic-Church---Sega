@@ -977,7 +977,7 @@ button a {
 
 .testi .section-title {
   color: var(--color-gold);
-  margin-block: 10px 40px;
+  /* margin-block: 10px ; */
   font-weight:600;
   font-size: 6.5rem;
 }
@@ -988,9 +988,9 @@ button a {
 .testi-name { font-size: 1.8rem; }
 
 .testi-text {
-  padding-block-end: 30px;
-  border-block-end: 1px solid hsla(0, 0%, 100%, 0.1);
-  margin-block: 20px 30px;
+  /* padding-block-end: 30px; */
+  /* border-block-end: 1px solid hsla(0, 0%, 100%, 0.1); */
+  /* margin-block: 20px 30px; */
 }
 
 .testi-title {

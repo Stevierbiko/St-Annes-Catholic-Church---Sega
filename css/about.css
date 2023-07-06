@@ -1,12 +1,5 @@
  @import "style.css";
  /* Reset some default styles  */
-
- body {
-  margin: 0;
-  padding: 0;
-}
-
-
 .content {
   background-color: #f8f8f8;
   text-align: center;
@@ -58,10 +51,10 @@ h1{
 
 }
 .para p{
-  font-size: 23px;
+  font-size: 2.5rem;
 }
 .para li{
-  font-size: 23px;
+  font-size: 2.5rem;
 
 }
 .container-fluid {
@@ -71,7 +64,7 @@ h1{
 
 .innerblock {
   background-color: white;
-  padding: 20px;
+  padding: 3rem;
   z-index: 2;
   margin-left: 200px;
 }
@@ -111,18 +104,18 @@ h1{
 .bishop, h3 {  
     color: #000000;
     text-align: center;
-    font-size: 25px;
+    font-size: 3rem;
   
     
 }
 ol li {
-  font-size: 14px;
+  font-size: 1rem;
   margin-left: 15px;
 
  
 }
 h6{
-  font-size: 22px;
+  font-size: 2.7rem;
   font-weight: lighter;
   margin-left: 35px;
 }
